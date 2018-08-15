@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="font/css/font-awesome.css">
+</head>
+<body>
+	<div class="body">
+		<div class="top"></div>
+		<div class="center">
+			<h2>登录/注册中心</h2>
+		</div>
+		<div class="bottom">
+			<ul>
+				<li><a href="login.html">个人登录中心</a></li>
+				<li><a href="register.html">个人注册中心</a></li>
+			</ul>
+		</div>
+		<div class="login">
+			<form method="post" onsubmit="return checkAll();">
+				<div class="loginphone">
+					<i class=" icon-tablet tubiao"></i>
+					<input class="input" type="text" id="phone" name="phone" placeholder="请输入手机号码"/>
+				</div>
+				<div class="message"></div>
+				<div class="loginusername">
+					<i class=" icon-user tubiao"></i>
+					<input class="input" type="text" id="user" name="user" placeholder="请输入2-4位的汉字用户名"/>
+				</div>
+				<div class="message"></div>
+				<div class="loginpassword">
+					<i class=" icon-lock tubiao"></i>
+					<input class="input" type="password" id="password" name="password" placeholder="请输入6-20位密码"/>
+				</div>
+				<div class="message"></div>
+				<div class="loginpassworded">
+					<i class=" icon-lock tubiao"></i>
+					<input class="input" type="password" id="passworded" name="passworded" placeholder="请再次确认密码"/>
+				</div>
+				<div class="message"></div>
+				<div class="register">
+					<input type="submit" class="submit" value="注册">
+				</div> 
+			</form>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>

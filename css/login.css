@@ -1,0 +1,184 @@
+*{
+	margin:0px;
+	height:0px;
+}
+.body{
+	height:1000px;
+	position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width:1000px;
+}
+.top{
+	width:100%;
+	height:400px;
+	background-image: url("../image/mem_bnr.jpg");
+	background-size:100%;
+	background-position:50% 50%;
+}
+.center{
+	margin-top:30px;
+	display:flex;
+	justify-content:center;
+}
+.bottom{
+	margin-top:80px;
+}
+.bottom ul{
+	list-style:none;
+	display:inline;
+	display:flex;
+	justify-content:center;
+}
+.bottom ul li{
+	width:400px;
+	height:60px;
+	background-color:#e4e8ea;
+	text-align:center;
+	font-size:18px;
+	line-height:60px;
+	cursor:pointer;
+	margin-left:50px;
+}
+ul li a:hover{
+	color:red;
+}
+.login{
+	margin-top:120px;
+	display:flex;
+	justify-content:center;
+}
+.loginuser{
+	width:500px;
+	height:50px;
+}
+.loginuser-left,.loginuser-center,.loginuser-right{
+	float:left;
+}
+.loginuser-left{
+	width:41px;
+	height:46px;
+	background-color:#eeeeee;
+	border:1px solid #858585;
+	border-radius:5px 0px 0px 5px;
+	position:relative;
+	border-right:none;
+}
+.loginuser-left i{
+	position:absolute;
+	top:15px;
+	left:15px;
+}
+.loginuser-center input{
+	width: 450px;
+	height: 46px;
+	border:0.5px solid #858585;
+	outline: none;
+	text-indent: 1em;
+	font-size: 14px;
+	border-radius:0px 5px 5px 0px;
+}
+.loginpwd{
+	width:500px;
+	height:50px;
+	margin-top:30px;
+}
+.loginpwd-left,.loginpwd-center{
+	float:left;
+}
+.loginpwd-left{
+	width:41px;
+	height:46px;
+	background-color:#eeeeee;
+	border:1px solid #858585;
+	border-radius:5px 0px 0px 5px;
+	position:relative;
+	border-right:none;
+}
+.loginpwd-left i{
+	position:absolute;
+	top:15px;
+	left:15px;
+}
+.loginpwd-center input{
+	width: 450px;
+	height: 46px;
+	border:0.5px solid #858585;
+	outline: none;
+	text-indent: 1em;
+	font-size: 14px;
+	border-radius:0px 5px 5px 0px;
+}
+.button{
+	width:500px;
+	height:50px;
+	margin-top:30px;
+}
+.button .submit{
+	width:495px;
+	height:46px;
+	font-size:18px;
+	background-color:#337ab7;
+	text-align:center;
+	line-height:46px;
+	border-radius:6px 6px 6px 6px;
+	color:white;
+	border:none;
+}
+.umsg,.pmsg{
+	display:none;
+}
+
+
+.tubiao{
+   position: relative;
+	font-size: 20px;
+	z-index: 100;
+}
+.login .input{
+    width: 490px;
+    height: 30px;
+    border: 1px solid #858585;
+	border-radius: 3px;
+	outline: none;
+	text-indent: 2em;
+	margin-left: -20px;
+	font-size:18px;
+}
+.loginusername,.loginpassword,.loginpassworded,.register{
+	margin-top:60px;
+}
+.register .submit{
+	width:495px;
+	height:46px;
+	font-size:18px;
+	background-color:#337ab7;
+	text-align:center;
+	line-height:46px;
+	border-radius:6px 6px 6px 6px;
+	color:white;
+	border:none;
+}
+.message{
+	margin-top:35px;
+	color:red;
+}
+
+a{
+	color:#333;
+	text-decoration:none;
+}
+
+.checkMessage{
+	margin-top:55px;
+	font-size:20px;
+	color:black;
+	display:flex;
+	justify-content:center;
+}
+#message{
+	color:red;
+	font-size:20px;
+	display:flex;
+	justify-content:center;
+}

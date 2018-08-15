@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	
+}
+ a{
+	text-decoration: none;
+}
+.context{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.head{
+	height: 432px;
+	width: 100%;
+}
+.head img{
+	height: 432px;
+	width: 100%;	
+}
+.center{
+	width: 80%;
+	height: 700px;
+}
+.tit{
+	margin-top: 40px;
+	border-bottom: 1px solid #999999;
+	height: 32px;
+	line-height: 32px;
+}
+.tit .left{
+	float: left;
+	font-size: 14px;
+	color:#999999;	
+}
+
+.tit .right{
+	float: right;
+	font-size: 16px;
+}
+ .tit .right a:hover{
+ 	color: red;
+ }
+.tit .right a{
+	text-decoration: none;
+	display: inline-block;
+	
+}
+
+.tit .right .one{
+	height: 32px;
+	width: 26px;
+	
+}
+.tit .right .two{
+	height: 32px;
+	width: 26px;
+	font-size: 18px;
+}
+.tit .right .three{
+	height: 32px;
+	width: 26px;
+	font-size: 24px;
+}
+.nr p{
+	text-indent: 2em;
+	text-align: left;
+	line-height: 26px;
+}
+
+.center .fanhui{
+	display: inline-block;
+	border: 1px solid #E62129;
+	border-radius: 6px;
+	padding: 6px 40px;
+	color: red;
+	text-decoration: none;
+}
+
+.center .fanhui:hover{
+	background-color: red;
+	color: white;
+	
+}
+
+.btn-box{
+	width: 100%;
+	text-align: center;
+}
+
+	
+
+

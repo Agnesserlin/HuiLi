@@ -1,0 +1,239 @@
+﻿body {
+    font-size: 16px;
+    font-family: 'Microsoft YaHei' !important;
+    color: #333;
+}
+
+.title {
+    padding: 50px 0 0px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.header{
+	height: 432px;
+	width: 100%;
+}
+.header img{
+	height: 432px;
+	width: 100%;	
+}
+
+.honor-title {
+    text-align: center;
+    height: 60px;
+}
+
+.honor-year {
+    width: 140px;
+    color: #e62129;
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: bold;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.honor-year-line {
+    position: relative;
+    margin-top: -30px;
+    background-color: #f0f0f0;
+    height: 1px;
+    border: none;
+    z-index: -1;
+}
+
+.honor-list {
+    position: relative;
+    width: 100%;
+}
+
+    .honor-list .honor-list-item {
+        min-height: 66px;
+        transform: translate(0,0);
+        transition: all .2s ease-in 0s;
+        margin: 16px;
+        width: 100%;
+    }
+
+.time {
+    margin-top: 3px;
+    margin-left: 20px;
+    float: left;
+    background-color: #f6f6f6;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    transform: translate(0,0);
+    transition: all .2s ease-in 0s;
+}
+
+    .time .month {
+        margin-top: 10px;
+        height: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    .time .line {
+        border-bottom: 1px solid #cfcfcf;
+        width: 70%;
+        text-align: center;
+        margin: 2px 9px 5px 9px;
+    }
+
+    .time .year {
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        margin: 0 14px
+    }
+
+.content {
+    float: left;
+    color: #333;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.honor-list-item:hover {
+    background-color: #f6f6f6;
+}
+
+    .honor-list-item:hover .time {
+        background-color: #e62129;
+    }
+
+        .honor-list-item:hover .time .month, .honor-list-item:hover .time .line, .honor-list-item:hover .time .year {
+            color: #fff;
+            border-color: #fff;
+        }
+
+.party-btn {
+    color: #333;
+    background-color: #f6f6f6;
+    width: 162px;
+    height: 52px;
+    font-size: 18px;
+    font-family: 'Microsoft YaHei' !important;
+}
+
+    .party-btn:hover {
+        color: #e62129;
+        background-color: #f6f6f6;
+    }
+
+    .party-btn.this {
+        color: #fff;
+        background-color: #e62129;
+        font-weight: bold;
+    }
+
+        .party-btn.this:hover {
+            color: #fff;
+            background-color: #e62129;
+        }
+
+.party-list {
+    margin-top:40px;
+}
+
+.party-list-item {
+    border-bottom: 1px solid #e0e0e0;
+    height: 120px;
+    margin-bottom: 14px;
+    padding: 10px;
+    cursor:pointer;
+    transform: translate(0,0);
+    transition: all .2s ease-in 0s;
+}
+
+.party-date {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #f0f2f3;
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .party-date .yr {
+        background-color: #e62129;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+    }
+
+    .party-date .md {
+        font-size: 20px;
+        font-weight: bold;
+        height: 50px;
+        line-height: 50px;
+    }
+
+.party-title {
+    padding-left:10px;
+    margin-top:20px;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.party-content {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #666;
+    height: 50px;
+    line-height: 16px;
+}
+
+.party-list-item:hover {
+    background-color: #545454;
+    -webkit-animation-name: left-bit;
+    animation-name: left-bit;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+    .party-list-item:hover .party-title, .party-list-item:hover .party-content {
+        color: #fff;
+    }
+
+@-webkit-keyframes left-bit {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(-2.5%,0,0);
+    }
+}
+
+@keyframes left-bit {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(-2.5%,0,0);
+    }
+}
+
+.anim-left-bit {
+    -webkit-animation-name: left-bit;
+    animation-name: left-bit;
+    animation-duration: .5s;
+    -webkit-animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode:forwards;
+}
+

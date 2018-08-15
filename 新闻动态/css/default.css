@@ -1,0 +1,144 @@
+﻿
+
+a { /*a标签去除下划线和颜色*/
+    text-decoration: none;
+}
+
+p{
+    margin:0;
+}
+
+a:hover{
+    color:#0f0f0f;
+}
+
+a:visited{
+    color:#000;
+}
+
+ul, ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liquid {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    min-width:1000px;
+}
+
+
+.liquid-1 {
+    width: 8.33%
+}
+
+.liquid-1-5 {
+    width: 12.5%
+}
+
+.liquid-2 {
+    width: 16.66%
+}
+
+.liquid-3 {
+    width: 25%
+}
+
+.liquid-4 {
+    width: 33.33%
+}
+
+.liquid-5 {
+    width: 41.66%
+}
+
+.liquid-6 {
+    width: 50%
+}
+
+.liquid-7 {
+    width: 58.33%
+}
+
+.liquid-8 {
+    width: 66.66%
+}
+
+.liquid-9 {
+    width: 75%
+}
+
+.liquid-10 {
+    width: 83.33%
+}
+
+.liquid-11 {
+    width: 91.66%
+}
+
+.liquid-12 {
+    width: 100%
+}
+
+.liquid-1, .liquid-1-5, .liquid-2, .liquid-3, .liquid-4, .liquid-5, .liquid-6, .liquid-7, .liquid-8, .liquid-9, .liquid-10, .liquid-11, .liquid-12 {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    color: black;
+}
+
+.row {
+    width: 100%
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center{
+    text-align:center;
+}
+
+.bg-red {
+    background-color: #FF5722 !important
+}
+
+.bg-orange {
+    background-color: #FFB800 !important
+}
+
+.bg-green {
+    background-color: #009688 !important
+}
+
+.bg-cyan {
+    background-color: #2F4056 !important
+}
+
+.bg-blue {
+    background-color: #1E9FFF !important
+}
+
+.bg-black {
+    background-color: #393D49 !important
+}
+
+.full-width{
+       height:432px;
+       width: 100%;
+}
+
+.hide{
+    display:none;
+}
+
+

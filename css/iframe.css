@@ -1,0 +1,156 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Microsoft YaHei';
+}
+
+a {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.main {
+}
+
+.left {
+    width: 265px;
+    height: 100%;
+    background-image: url(../image/phdr_l_bg.jpg);
+    background-size: 175px 100%;/*宽高*/
+    background-repeat: no-repeat;
+    background-color: #f6f6f6;
+    position: absolute;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.logo {
+    margin-top: 50px;
+}
+
+.nav {
+    width: 175px;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 30px;
+    padding: 0 !important;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+    .nav-item a {
+        padding: 8px 20px;
+        line-height: 34px;
+        display: block;
+        transition: all .3s;
+    }
+
+        .nav-item a:hover {
+            background-color: rgba(100,100,100,0.6);
+        }
+
+    .nav-item.this a {
+        background-color: red;
+    }
+
+        .nav-item.this a:hover {
+            color: #fff;
+        }
+
+        .nav-item.this a .right-arrow:after {/*插入生成的内容*/
+            content: '>';
+            float: right;
+            margin-top: -2px;
+            margin-right: -10px;
+            font-size: 26px;
+            font-style: normal !important;
+        }
+
+    .nav-item ul {
+        display: none;
+    }
+
+    .nav-item.this ul {
+        display: block;
+        height: 0;
+        width: 90px;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 !important;
+        margin-left: 175px;
+        position: relative;
+        top: -50px;
+    }
+
+        .nav-item.this ul li {
+            padding: 10px 0px;
+        }
+
+            .nav-item.this ul li a {
+                padding: 8px 10px;
+                line-height: 20px;
+                display: block;
+                transition: all .3s;
+                background-color: #f6f6f6;
+                color: #000 !important;
+            }
+
+                .nav-item.this ul li a:hover {
+                    color: red !important;
+                }
+
+            .nav-item.this ul li.this a {
+                color: red !important;
+            }
+
+
+
+
+.right {
+    float: left;
+    position: absolute;
+    width: auto;/*auto自适应*/
+    right: 0;
+    left: 265px;
+    top: 0px;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.react-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #000;
+    font-weight: 700;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+    border-radius: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;/*所有的过渡0.3s*/
+    text-align: center;
+    box-sizing: border-box;/*内容区的实际宽度会是width减去border + padding的计算值*/
+}
+
+    .react-btn:hover {
+        background-color: #fff;
+        color: red !important;/*把它的权重设为最高*/
+        border-color: red !important;
+    }

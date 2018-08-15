@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/iframe.css">
+    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="left" id="menu">
+            <img class="logo" src="image/slogo.png">
+            <div id="menuBtn" class="react-btn"><</div>
+            <ul class="nav">
+                <li class="nav-item" id="first"><a href="index.html" target="content">首页<i class="right-arrow"></i></a></li>
+                <li class="nav-item">
+                    <a href="javascript:;">走进回力<i class="right-arrow"></i></a>
+                    <ul>
+                        <li><a href="走进回力/about.html" target="content">回力概况</a></li>
+                        <li><a href="走进回力/honor.html" target="content">企业荣誉</a></li>
+                        <li><a href="走进回力/party.html" target="content">党员建设</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;">新闻动态<i class="right-arrow"></i></a>
+                    <ul>
+                        <li><a href="新闻动态/new.html" target="content">回力新闻</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;">回力产品<i class="right-arrow"></i></a>
+                    <ul>
+                        <li><a href="回力产品/product.html" target="content">新品推荐</a></li>
+                        <li><a href="回力产品/classics.html" target="content">休闲系列</a></li>
+                        <li><a href="回力产品/net.html" target="content">网络渠道</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;">联系我们<i class="right-arrow"></i></a>
+                    <ul>
+                        <li><a href="新闻动态/exchange.html" target="content">加盟</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" target="content">登录中心<i class="right-arrow"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="right" id="body">
+            <iframe id="frame" src="index.html" class="frame" name="content" scrolling="yes" frameborder="0"></iframe>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function FrameHeightAdapt()
+        {
+            var height = $(window).height();
+            $('#frame').height(height - 4); //-4是补丁
+        }
+        window.addEventListener("resize", FrameHeightAdapt);/*窗口监听事件，当窗口大小发生变化时执行函数*/
+        FrameHeightAdapt();
+
+
+        lastFirst = null;
+        $('.nav').children().click(function ()
+        {
+            if (lastFirst != null) $(lastFirst).removeClass("this");
+            $(this).addClass("this");
+            lastFirst = this;
+        });
+
+        lastSecond = null;
+        $('.nav-item ul').children().click(function ()
+        {
+            if (lastSecond != null) $(lastSecond).removeClass("this");
+            $(this).addClass("this");
+            lastSecond = this;
+        });
+
+        $('#first').click();
+
+
+
+        function createSideMenu(options)
+        {
+            var params =
+                {
+                    menu: "",
+                    body: "",
+                    button: "",
+                };
+
+            for (var key in options)
+            {
+                params[key] = options[key];
+            }
+
+            var menu = $('#' + params.menu);
+            var button = $('#' + params.button);
+            var body = $('#' + params.body);
+
+
+
+            var isOpen = 1;
+            var index = null;
+
+            function AddPx(px)
+            {
+                return (parseInt(px.replace('px', '')) + 7) + 'px';
+            }
+            function SubPx(px)
+            {
+                return (parseInt(px.replace('px', '')) - 7) + 'px';
+            }
+
+            function move()
+            {
+                clearInterval(index);
+                var id;
+                if (isOpen == 1)
+                {
+                    button.html(">");
+
+                    id = setInterval(function ()
+                    {
+                        menu.css("left", SubPx(menu.css("left")));
+                        body.css("left", SubPx(body.css("left")));
+
+                        if (menu.css("left") == "-175px")
+                        {
+                            clearInterval(id);
+                        }
+                    }, 17);
+                }
+                else
+                {
+                    button.html("<");
+
+                    id = setInterval(function ()
+                    {
+                        menu.css("left", AddPx(menu.css("left")));
+                        body.css("left", AddPx(body.css("left")));
+
+                        if (menu.css("left") == "0px")
+                        {
+                            clearInterval(id);
+                        }
+                    }, 17);
+                }
+                isOpen ^= 1;
+                index = id;
+            }
+
+            button.click(function ()
+            {
+                move();
+            });
+        }
+
+        createSideMenu({
+            menu: "menu",
+            button: "menuBtn",
+            body: "body"
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>回力鞋业</title>
+		<link rel="stylesheet" href="css/product.css" />
+		<link rel="stylesheet" href="css/show.css" />
+		
+	</head>
+	<body>
+		<div class="heart">
+			<div class="img_show">
+				<!--图片-->
+				<div class="big" id="bigImage">
+					
+				</div>
+				<!--选择图片-->
+				<div class="select" id="imageline">
+					<div class="small" id="smallImage0"></div>
+					<div class="small" id="smallImage1"></div>
+					<div class="small" id="smallImage2"></div>
+				</div>
+			</div>
+			<!--描述-->
+			<div class="show_content">
+				
+					<span class="dis" id="name"></span>
+					<p class="style" id="type">产品类型：</p>
+					<p class="style" id="size">法码：</p>
+				
+			</div>
+		</div>
+	
+		<div class="heart footer">
+			<strong style="margin-left: 30px;font-size: 25px;">请注意：</strong>
+			<p class="foot_content">1.由于各品牌尺码标准不同，所以请各位顾客根据自己所选品牌选择商品尺码。</p>
+			<p class="foot_content">2.本公司出售商品均为正品， 尺码与专卖店都是相同的。</p>
+			<p class="foot_content">3.因拍摄过程中受光线、角度等不可抗拒因素影响，包括您的显示器的原因，照片与实物间可能会有微弱的色差。</p>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		function getQueryString(name) {
+  			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); // 匹配目标参数
+			var result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
+			  if (result != null) {
+			    return decodeURIComponent(result[2]);
+			  } else {
+			    return null;
+			  }
+		}
+		
+		var name=getQueryString("_name");
+		var type=getQueryString("type");
+		var size=getQueryString("size");
+		var img=getQueryString("img");
+		var imgs=img.split('~');
+		
+		$('#name').append(name);
+		$('#type').append(type);
+		$('#size').append(size);
+		
+		$('#bigImage').append("<img src='"+ imgs[0]+"'/>");
+		
+		var A;
+		for(A=0;A<imgs.length;++A)
+		{
+			$('#smallImage'+A).append("<img src='"+ imgs[A]+"'/>");
+		}
+		
+		var last=null;
+		
+			$("#imageline div").click(function(){
+				if(last!=null)
+				{
+					$(last).css("border","none");
+				}
+				
+				$(this).css("border","1px solid red");
+				var img=$(this).html();
+				$("#bigImage").html(img);
+				
+				last=this;
+			});
+		
+	</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="font/css/font-awesome.css">
+</head>
+<body>
+	<div class="body">
+		<div class="top"></div>
+		<div class="center">
+			<h2>登录/注册中心</h2>
+		</div>
+		<div class="bottom">
+			<ul>
+				<li><a href="login.html">个人登录中心</a></li>
+				<li><a href="register.html">个人注册中心</a></li>
+			</ul>
+		</div>
+		<div class="login">
+			<form method="post" onsubmit="return checkedall();">
+				<div class="loginuser">
+					<div class="loginuser">
+						<i class=" icon-tablet tubiao"></i>
+						<input class="input" type="text" id="phone" name="phone" placeholder="请输入手机号码"/>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="umsg" id="umsg">请输入手机号码！</div>
+				<div class="loginpwd">
+					<i class=" icon-lock tubiao"></i>
+					<input class="input" type="password" id="password" name="password" placeholder="请输入6-20位密码"/>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="pmsg" id="pmsg">请输入密码！</div>
+				<div class="button">
+					<input type="submit" class="submit" value="登录">
+				</div>
+				<div id="message"></div>
+			</form>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		var isphone=false;
+		var ispwd=false;
+		var  uinput=document.getElementById("phone");
+		var  pinput=document.getElementById("password");
+		var umsg=document.getElementById("umsg");
+		var pmsg=document.getElementById("pmsg");
+
+
+		uinput.onblur=function(){
+			var strValue= this.value;
+			if(strValue==null || strValue.trim().length==0){
+				this.style.border="1px solid red";
+				umsg.style.display="block";
+				isphone=false;
+			}else{
+				this.style.border="1px solid black";
+				umsg.style.display="none";
+				isphone=true;
+			}
+		}  
+
+		pinput.onblur=function(){
+			var strValue= this.value;
+			if(strValue==null || strValue.trim().length==0){
+				this.style.border="1px solid red";
+				pmsg.style.display="block";
+				ispwd=false;
+			}
+			else{
+				this.style.border="1px solid black";
+				pmsg.style.display="none";
+				ispwd=true;
+			}
+		}  
+
+
+
+		function checkedall(){
+			if(isphone==true && ispwd==true){
+				var strPhone=uinput.value;
+				var strPwd=pinput.value;
+				var obj= localStorage.getItem(strPhone);
+				if(obj==null){
+					location.href="register.html";
+					return false;
+				}else{
+					if(obj!=strPwd){
+						document.getElementById("pmsg").innerHTML="密码错误";
+						return  false;
+					}else{
+						document.getElementById("message").innerHTML="登录成功！！"
+           		  	  		return false;//防止表单刷新
+           		  	  	}
+
+           		  	  }
+           		  	}
+           		  	else if(isphone==false && ispwd==false){
+           		  		uinput.style.border="1px solid red";
+           		  		umsg.style.display="block";
+
+           		  		pmsg.style.display="block";
+
+           		  		pinput.style.border="1px solid red";
+           		  	}	
+           		  	return false;
+
+           		  }
+
+           		</script>
+           	</body>
+           	</html>

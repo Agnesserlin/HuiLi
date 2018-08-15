@@ -1,0 +1,186 @@
+﻿body {
+    /*background-color: #f3f3f3;*/
+}
+
+a { /*a标签去除下划线和颜色*/
+    text-decoration: none;
+    color: #000;
+}
+
+p{
+    margin:0;
+}
+
+a:hover{
+    color:#0f0f0f;
+}
+
+a:visited{
+    color:#000;
+}
+
+ul, ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liquid {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    min-width:1000px;
+}
+
+.liquid-1 {
+    width: 8.33%
+}
+
+.liquid-1-5 {
+    width: 12.5%
+}
+
+.liquid-2 {
+    width: 16.66%
+}
+
+.liquid-3 {
+    width: 25%
+}
+
+.liquid-4 {
+    width: 33.33%
+}
+
+.liquid-5 {
+    width: 41.66%
+}
+
+.liquid-6 {
+    width: 50%
+}
+
+.liquid-7 {
+    width: 58.33%
+}
+
+.liquid-8 {
+    width: 66.66%
+}
+
+.liquid-9 {
+    width: 75%
+}
+
+.liquid-10 {
+    width: 83.33%
+}
+
+.liquid-11 {
+    width: 91.66%
+}
+
+.liquid-12 {
+    width: 100%
+}
+
+.liquid-1, .liquid-1-5, .liquid-2, .liquid-3, .liquid-4, .liquid-5, .liquid-6, .liquid-7, .liquid-8, .liquid-9, .liquid-10, .liquid-11, .liquid-12 {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.row {
+    width: 100%
+}
+
+.input {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+    color: #000;
+    padding-left: 10px;
+    border-radius: 2px;
+    font: 400 14px Arial;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+    .input:hover {
+        border: 1px solid #d0d0d0;
+    }
+
+    .input:focus {
+        border: 1px solid #c0c0c0;
+    }
+
+.btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline:none;
+}
+
+.btn:focus{
+    border:none;
+}
+
+    .btn:hover {
+        background-color: #10a698;
+    }
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.center{
+    text-align:center
+}
+
+.bg-red {
+    background-color: #FF5722 !important
+}
+
+.bg-orange {
+    background-color: #FFB800 !important
+}
+
+.bg-green {
+    background-color: #009688 !important
+}
+
+.bg-cyan {
+    background-color: #2F4056 !important
+}
+
+.bg-blue {
+    background-color: #1E9FFF !important
+}
+
+.bg-black {
+    background-color: #393D49 !important
+}
+
+.full-width{
+
+}
+
+.hide{
+    display:none;
+}

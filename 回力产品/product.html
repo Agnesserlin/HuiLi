@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>回力鞋业</title>
+		<link rel="stylesheet" href="css/product.css" />		
+	</head>
+	<body>
+		<div class=" heart top">
+			<img src="image/prt_bnr.jpg"  class="top_img"/>
+		</div>
+		<h2>新品推荐</h2>
+		<div class="heart center">
+			<ul id="list">
+			</ul>
+		</div>
+		<script type="text/html" id="listItem">
+			<li class="img_div" id="item{index}">
+					<span>...</span>
+					<img src="{src}" class="center_img"/>
+					<div class="img_centent">
+						<h3>{name}</h3>
+						<p>产品类型：{type}</p>
+					</div>
+				</li>
+		</script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/product.js" ></script>
+	</body>
+</html>

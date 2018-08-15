@@ -1,0 +1,19 @@
+table{
+	margin: 0 auto;
+	border:none;	
+}
+th{
+	font-family: "楷体";
+	font-size: 18px;
+	height: 40px;	
+}
+a{
+	color:black;
+}
+a:hover{
+	color:mediumpurple;
+}
+.table{
+	height: 50px;
+	background-color: #CACACA;
+}
